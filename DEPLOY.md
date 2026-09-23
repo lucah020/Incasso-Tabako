@@ -1,13 +1,21 @@
-# Deployment
+# GitHub Pages deployment
 
-Deze site is bedoeld voor GitHub Pages met de bron `main` en map `/(root)`.
+Gebruik `main` + `/(root)` als publicatiebron.
 
-Belangrijk:
-- Laat `assets/` als map bestaan.
-- Laat `dossiers/` als map bestaan.
-- Verplaats `hero-incasso-tabako.png` niet naar de root.
-- Verplaats `manu-p.html` niet naar de root.
+Behoud deze mappenstructuur:
 
-De juiste paden zijn:
-- `assets/hero-incasso-tabako.png`
+- `assets/logo-incasso-tabako.webp`
+- `assets/team-incasso-tabako.webp`
 - `dossiers/manu-p.html`
+- `dossiers/rookincident-manu-p.html`
+- `archieven/csi-zeeburgereiland-cobra-k.html`
+
+Na wijzigingen in VS Code:
+
+```bash
+git add -A
+git commit -m "Update website"
+git push origin main
+```
+
+GitHub Pages publiceert daarna automatisch opnieuw.

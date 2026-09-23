@@ -1,21 +1,24 @@
-# Incasso Tabako — VS Code website
+# Incasso Tabako — website V6
 
-Deze versie is een gewone statische website in HTML, CSS en JavaScript.
+Statische website in HTML, CSS en JavaScript.
 
-## Starten
-1. Open de map `incasso-tabako-vscode` in Visual Studio Code.
-2. Installeer eventueel de extensie **Live Server**.
-3. Rechtsklik op `index.html` en kies **Open with Live Server**.
+## Starten in VS Code
+1. Open deze map in Visual Studio Code.
+2. Open `index.html` met **Live Server**.
 
-## Belangrijkste bestanden
+## Structuur
 - `index.html` — homepage
-- `zakenarchief.html` — openbaar zakenarchief
+- `zakenarchief.html` — lopende en afgeronde openbare dossiers
+- `archieven.html` — historische zaken
 - `waarvoor.html` — soorten zaken
 - `contact.html` — contactpagina
-- `dossiers/manu-p.html` — dossier Manu P.
-- `style.css` — volledige vormgeving
-- `script.js` — mobiel menu en contactformulier
-- `assets/hero-incasso-tabako.png` — teambanner
+- `dossiers/manu-p.html` — afgesloten dossier IT-001
+- `dossiers/rookincident-manu-p.html` — openstaand dossier IT-002
+- `archieven/csi-zeeburgereiland-cobra-k.html` — historisch archiefitem ARCH-001
+- `assets/logo-incasso-tabako.webp` — logo
+- `assets/team-incasso-tabako.webp` — teamfoto / homepage-banner
+- `style.css` — vormgeving
+- `script.js` — menu en contactformulier
 
-## Online zetten
-Deze map kan rechtstreeks worden gepubliceerd via GitHub Pages, Netlify of een andere statische host.
+## Publiceren
+De map kan rechtstreeks als root van de GitHub-repository worden gepubliceerd via GitHub Pages.
