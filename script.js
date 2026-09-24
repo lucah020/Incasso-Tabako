@@ -1,36 +1,79 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+  if (menuButton && nav) {
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
     });
-  });
-}
+  }
 
-const contactForm = document.querySelector('#contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+  const copyButton = document.getElementById('copy-email');
+  if (copyButton) {
+    copyButton.addEventListener('click', async () => {
+      const email = copyButton.dataset.email || '';
+      try {
+        await navigator.clipboard.writeText(email);
+        const original = copyButton.textContent;
+        copyButton.textContent = 'Gekopieerd ✓';
+        setTimeout(() => { copyButton.textContent = original; }, 1800);
+      } catch (_) {
+        window.prompt('Kopieer het e-mailadres:', email);
+      }
+    });
+  }
 
-    const data = new FormData(contactForm);
-    const name = String(data.get('name') || '').trim();
-    const email = String(data.get('email') || '').trim();
-    const subject = String(data.get('subject') || '').trim();
-    const story = String(data.get('story') || '').trim();
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterFrame = document.getElementById('newsletter-submit-frame');
+  const newsletterSuccess = document.getElementById('newsletter-success');
+  const newsletterTimeout = document.getElementById('newsletter-timeout');
+  const newsletterState = document.getElementById('newsletter-form-state');
+  const newsletterSubmit = document.getElementById('newsletter-submit');
+  const newsletterAgain = document.getElementById('newsletter-again');
 
-    const mailSubject = encodeURIComponent(`Nieuwe aanmelding Incasso Tabako: ${subject}`);
-    const mailBody = encodeURIComponent(
-      `Naam: ${name}\nE-mailadres: ${email}\nOnderwerp: ${subject}\n\nSituatie:\n${story}`
-    );
+  if (newsletterForm && newsletterFrame) {
+    let submitted = false;
+    let timer;
 
-    window.location.href = `mailto:incassotabako@gmail.com?subject=${mailSubject}&body=${mailBody}`;
-  });
-}
+    newsletterForm.addEventListener('submit', () => {
+      submitted = true;
+      if (newsletterSubmit) {
+        newsletterSubmit.disabled = true;
+        newsletterSubmit.textContent = 'Aanmelden…';
+      }
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (submitted && newsletterTimeout) {
+          newsletterTimeout.hidden = false;
+          if (newsletterSubmit) {
+            newsletterSubmit.disabled = false;
+            newsletterSubmit.textContent = 'Aanmelden voor dossierupdates';
+          }
+        }
+      }, 12000);
+    });
+
+    newsletterFrame.addEventListener('load', () => {
+      if (!submitted) return;
+      submitted = false;
+      clearTimeout(timer);
+      if (newsletterState) newsletterState.hidden = true;
+      if (newsletterTimeout) newsletterTimeout.hidden = true;
+      if (newsletterSuccess) newsletterSuccess.hidden = false;
+    });
+  }
+
+  if (newsletterAgain) {
+    newsletterAgain.addEventListener('click', () => {
+      if (newsletterSuccess) newsletterSuccess.hidden = true;
+      if (newsletterState) newsletterState.hidden = false;
+      if (newsletterForm) newsletterForm.reset();
+      if (newsletterSubmit) {
+        newsletterSubmit.disabled = false;
+        newsletterSubmit.textContent = 'Aanmelden voor dossierupdates';
+      }
+    });
+  }
+});

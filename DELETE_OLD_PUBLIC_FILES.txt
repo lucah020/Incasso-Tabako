@@ -1,0 +1,11 @@
+VERWIJDER DEZE OUDE BESTANDEN UIT DE PUBLIEKE GITHUB-REPOSITORY:
+
+archieven.html
+archieven/csi-zeeburgereiland-client-005.html
+archieven/csi-zeeburgereiland-cobra-k.html
+dossiers/manu-p.html
+dossiers/rookpact-manu-p.html
+assets/bijlagen/rookpact-manu-p.pdf
+
+Waarom: nieuwe bestanden uploaden via GitHub verwijdert bestaande oude URL's niet automatisch.
+V23 heeft geen historisch archief meer.
