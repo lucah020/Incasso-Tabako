@@ -4,7 +4,7 @@ Gebruik `main` + `/(root)` als publicatiebron.
 
 Behoud deze mappenstructuur:
 
-- `assets/logo-incasso-tabako.webp`
+- `assets/logo-incasso-tabako.png`
 - `assets/team-incasso-tabako.webp`
 - `dossiers/manu-p.html`
 - `dossiers/rookincident-manu-p.html`

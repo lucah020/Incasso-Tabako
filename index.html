@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="Incasso Tabako homepage">
-        <img class="brand-logo" src="assets/logo-incasso-tabako.webp" alt="Incasso Tabako — Vorderen vandaag, een sterker morgen">
+        <img class="brand-logo" src="assets/logo-incasso-tabako.png" alt="Incasso Tabako — Vorderen vandaag, een sterker morgen">
       </a>
       <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav" aria-label="Hoofdnavigatie">
@@ -60,6 +60,23 @@
         </div>
 
         <div class="archive-list">
+          <a class="archive-card" href="dossiers/vergoedingsverzoek-cosmetische-ingreep.html">
+            <div>
+              <div class="archive-topline">
+                <span class="archive-index">IT-003</span>
+                <span class="archive-type">Nieuwe melding</span>
+              </div>
+              <div class="archive-main">
+                <h3>Vergoedingsverzoek na cosmetische ingreep — anonieme melder</h3>
+                <p>Een anonieme melder vraagt of de kosten van een cosmetische ingreep mogelijk kunnen worden verhaald vanwege aanhoudend ongemak na de behandeling. De melding wordt eerst beoordeeld op feiten, tegenpartij en mogelijke grondslag voor een vergoeding.</p>
+              </div>
+            </div>
+            <div class="archive-meta">
+              <span class="status open">Openstaand</span>
+              <span class="archive-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
           <a class="archive-card" href="dossiers/rookincident-manu-p.html">
             <div>
               <div class="archive-topline">
@@ -101,10 +118,38 @@
       </div>
     </section>
 
+    <section class="section sand">
+      <div class="container">
+        <div class="newsletter-box">
+          <div>
+            <p class="section-number">02 / Updates</p>
+            <h2>Blijf op de hoogte.</h2>
+            <p class="lede">Laat je e-mailadres achter als je een melding wilt ontvangen wanneer er een nieuw openbaar dossier of een belangrijke statusupdate verschijnt.</p>
+          </div>
+
+          <form class="newsletter-form" action="https://formsubmit.co/incassotabako@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe update-aanmelding — Incasso Tabako">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://lucah020.github.io/Incasso-Tabako/contact.html?signup=success">
+            <div class="newsletter-grid">
+              <label>Naam<input type="text" name="Naam" autocomplete="name" required></label>
+              <label>E-mailadres<input type="email" name="E-mailadres" autocomplete="email" required></label>
+            </div>
+            <label>Opmerking (optioneel)<input type="text" name="Opmerking" placeholder="Bijvoorbeeld: alleen updates over nieuwe zaken"></label>
+            <div class="button-row compact-row">
+              <button class="button" type="submit">Meld mij aan voor updates</button>
+            </div>
+            <p class="form-note">Je aanmelding komt binnen bij Incasso Tabako. Daarna kan je op de hoogte worden gehouden van nieuwe openbare zaken.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section white">
       <div class="container home-contact-grid">
         <div class="contact-copy">
-          <p class="section-number">02 / Contact</p>
+          <p class="section-number">03 / Contact</p>
           <h2>Wat speelt er?</h2>
           <p>Vertel ons waar het conflict over gaat en welke oplossing je voor ogen hebt.</p>
           <p class="contact-email"><a href="mailto:incassotabako@gmail.com">incassotabako@gmail.com</a></p>

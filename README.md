@@ -15,7 +15,7 @@ Statische website in HTML, CSS en JavaScript.
 - `dossiers/manu-p.html` — afgesloten dossier IT-001
 - `dossiers/rookincident-manu-p.html` — openstaand dossier IT-002
 - `archieven/csi-zeeburgereiland-cobra-k.html` — historisch archiefitem ARCH-001
-- `assets/logo-incasso-tabako.webp` — logo
+- `assets/logo-incasso-tabako.png` — logo
 - `assets/team-incasso-tabako.webp` — teamfoto / homepage-banner
 - `style.css` — vormgeving
 - `script.js` — menu en contactformulier

@@ -9,7 +9,7 @@
 <body id="top">
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Incasso Tabako homepage"><img class="brand-logo" src="assets/logo-incasso-tabako.webp" alt="Incasso Tabako — Vorderen vandaag, een sterker morgen"></a>
+      <a class="brand" href="index.html" aria-label="Incasso Tabako homepage"><img class="brand-logo" src="assets/logo-incasso-tabako.png" alt="Incasso Tabako — Vorderen vandaag, een sterker morgen"></a>
       <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav" aria-label="Hoofdnavigatie"><a href="zakenarchief.html">Zakenarchief</a><a href="archieven.html">Archieven</a><a href="waarvoor.html">Waarvoor kun je terecht?</a><a href="contact.html" aria-current="page">Contact ↗</a></nav>
     </div>
@@ -47,6 +47,32 @@
           <p class="form-feedback">Na verzenden opent je eigen e-mailprogramma met het bericht ingevuld.</p>
           <div><button class="button" type="submit">Een conflict aanmelden ↗</button></div>
         </form>
+      </div>
+    </section>
+
+    <section class="section sand">
+      <div class="container">
+        <div class="newsletter-box">
+          <div>
+            <p class="section-number">Update-service</p>
+            <h2>Nieuwe zaken per e-mail.</h2>
+            <p class="lede">Meld je aan als je op de hoogte wilt blijven van nieuwe openbare zaken en belangrijke statuswijzigingen binnen het dossieroverzicht.</p>
+          </div>
+
+          <form class="newsletter-form" action="https://formsubmit.co/incassotabako@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe update-aanmelding — Incasso Tabako">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://lucah020.github.io/Incasso-Tabako/contact.html?signup=success">
+            <div class="newsletter-grid">
+              <label>Naam<input type="text" name="Naam" autocomplete="name" required></label>
+              <label>E-mailadres<input type="email" name="E-mailadres" autocomplete="email" required></label>
+            </div>
+            <label>Opmerking (optioneel)<input type="text" name="Opmerking" placeholder="Bijvoorbeeld: alleen updates over openstaande zaken"></label>
+            <div class="button-row compact-row"><button class="button" type="submit">Meld mij aan voor updates</button></div>
+            <p class="form-note">Je aanmelding wordt doorgestuurd naar Incasso Tabako.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
