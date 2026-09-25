@@ -1,20 +1,26 @@
-# Incasso Tabako V20
+# Incasso Tabako V25
 
-Toegevoegd: sectie **Ons team** met rollen, verantwoordelijkheden en motto's.
+Public website rebuild for incassotabako.nl.
 
-# Incasso Tabako - V19
+## Deploy
+Upload the contents of this folder to the root of the GitHub Pages repository. Keep `CNAME` and `.nojekyll`.
 
-Deze versie bevat:
-- de nieuwe banner met bivakmutsen;
-- openbare dossiers met clientnummers in plaats van persoonsnamen;
-- geanonimiseerde dossier-URL's voor zaken waarin eerder een naam in de bestandsnaam stond;
-- een geanonimiseerde PDF-bijlage voor het rookpact;
-- een contactformulier dat rechtstreeks vanuit de browser verstuurt en geen mail-app meer opent;
-- de bestaande Brevo dossierupdates.
+## Main changes
+- Shorter homepage with latest dossiers only
+- Separate Dossiers, Team, Services, Privacy pages
+- Search/filter on dossiers
+- Consistent dossier layouts and last-updated dates
+- Better public anonymisation wording
+- Contact form with privacy consent
+- SEO/OG, sitemap, robots, custom 404, favicon, WebP assets
+- Expanded footer
 
-## Belangrijk bij publicatie
-Verwijder de oude bestanden met persoonsnamen uit de publieke repository. Alleen nieuwe bestanden uploaden is niet genoeg, omdat oude URL's anders bereikbaar blijven.
+The employee portal prototype is delivered separately and should **not** be uploaded to the public GitHub Pages repository.
 
-Zie `DELETE_OLD_PUBLIC_FILES.txt`.
 
-V21: vernieuwde afwisselende Ons Team-sectie met vierkante portretten.
+## V28
+- Navy dossier theme for overview and dossier pages.
+- Kesso corrected to Founder & COO.
+- Larger header logo.
+- Homepage hero restored with “Het dossier begint bij jouw verhaal” and a larger conflict CTA.
+- Newsletter signup added below leadership.

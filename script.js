@@ -1,79 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuButton = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
 
-  if (menuButton && nav) {
-    menuButton.addEventListener('click', () => {
-      const open = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('is-open', !open);
-    });
-  }
-
-  const copyButton = document.getElementById('copy-email');
-  if (copyButton) {
-    copyButton.addEventListener('click', async () => {
-      const email = copyButton.dataset.email || '';
-      try {
-        await navigator.clipboard.writeText(email);
-        const original = copyButton.textContent;
-        copyButton.textContent = 'Gekopieerd ✓';
-        setTimeout(() => { copyButton.textContent = original; }, 1800);
-      } catch (_) {
-        window.prompt('Kopieer het e-mailadres:', email);
-      }
-    });
-  }
-
-  const newsletterForm = document.getElementById('newsletter-form');
-  const newsletterFrame = document.getElementById('newsletter-submit-frame');
-  const newsletterSuccess = document.getElementById('newsletter-success');
-  const newsletterTimeout = document.getElementById('newsletter-timeout');
-  const newsletterState = document.getElementById('newsletter-form-state');
-  const newsletterSubmit = document.getElementById('newsletter-submit');
-  const newsletterAgain = document.getElementById('newsletter-again');
-
-  if (newsletterForm && newsletterFrame) {
-    let submitted = false;
-    let timer;
-
-    newsletterForm.addEventListener('submit', () => {
-      submitted = true;
-      if (newsletterSubmit) {
-        newsletterSubmit.disabled = true;
-        newsletterSubmit.textContent = 'Aanmelden…';
-      }
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        if (submitted && newsletterTimeout) {
-          newsletterTimeout.hidden = false;
-          if (newsletterSubmit) {
-            newsletterSubmit.disabled = false;
-            newsletterSubmit.textContent = 'Aanmelden voor dossierupdates';
-          }
-        }
-      }, 12000);
-    });
-
-    newsletterFrame.addEventListener('load', () => {
-      if (!submitted) return;
-      submitted = false;
-      clearTimeout(timer);
-      if (newsletterState) newsletterState.hidden = true;
-      if (newsletterTimeout) newsletterTimeout.hidden = true;
-      if (newsletterSuccess) newsletterSuccess.hidden = false;
-    });
-  }
-
-  if (newsletterAgain) {
-    newsletterAgain.addEventListener('click', () => {
-      if (newsletterSuccess) newsletterSuccess.hidden = true;
-      if (newsletterState) newsletterState.hidden = false;
-      if (newsletterForm) newsletterForm.reset();
-      if (newsletterSubmit) {
-        newsletterSubmit.disabled = false;
-        newsletterSubmit.textContent = 'Aanmelden voor dossierupdates';
-      }
-    });
-  }
+document.addEventListener('DOMContentLoaded',()=>{
+ const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+ if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});}
+ document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+ const copy=document.querySelector('[data-copy-email]'); if(copy){copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(copy.dataset.copyEmail);const old=copy.textContent;copy.textContent='Gekopieerd ✓';setTimeout(()=>copy.textContent=old,1800);}catch(e){}})}
+ const search=document.getElementById('case-search'),chips=[...document.querySelectorAll('.filter-chip')],cards=[...document.querySelectorAll('#case-list .case-card')],count=document.getElementById('case-count'),empty=document.getElementById('case-empty');
+ if(cards.length){let filter='all'; const run=()=>{const q=(search?.value||'').trim().toLowerCase();let shown=0;cards.forEach(card=>{const okF=filter==='all'||card.dataset.status===filter;const okQ=!q||card.dataset.search.includes(q);const show=okF&&okQ;card.hidden=!show;if(show)shown++;});if(count)count.textContent=`${shown} ${shown===1?'dossier':'dossiers'}`;if(empty)empty.hidden=shown!==0;}; chips.forEach(chip=>chip.addEventListener('click',()=>{chips.forEach(c=>c.classList.remove('is-active'));chip.classList.add('is-active');filter=chip.dataset.filter;run();}));search?.addEventListener('input',run);run();}
 });

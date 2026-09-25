@@ -1,70 +1,42 @@
-<!doctype html>
-<html lang="nl">
-<head>
+<!doctype html><html lang="nl"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Leg een nieuwe zaak voor aan Incasso Tabako.">
-  <title>Contact — Incasso Tabako</title>
-  <link rel="stylesheet" href="style.css?v=23">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-</head>
-<body id="top">
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Incasso Tabako homepage"><img class="brand-logo" src="assets/logo-incasso-tabako.png?v=23" alt="Incasso Tabako — Vorderen vandaag, een sterker morgen"></a>
-      <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="Hoofdnavigatie"><a href="zakenarchief.html">Zakenarchief</a><a href="updates.html">Updates</a>
-        <a href="index.html#ons-team">Ons team</a><a href="waarvoor.html">Waarvoor kun je terecht?</a><a href="contact.html" aria-current="page">Contact ↗</a></nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="index.html">Homepage</a> / Contact</p>
-        <p class="eyebrow">Een zaak voorleggen</p>
-        <h1>Vertel ons<br><span>wat er speelt.</span></h1>
-        <p class="lede">Vul het formulier in en verstuur je melding rechtstreeks vanuit de website. Je hoeft hiervoor geen e-mailprogramma of andere applicatie te openen.</p>
-      </div>
-    </section>
-
-    <section class="section white">
-      <div class="container contact-grid contact-grid-clean">
-        <div class="contact-copy">
-          <p class="section-number">Direct contact</p>
-          <h2>Zaak aanmelden.</h2>
-          <p>Vertel kort wie erbij betrokken zijn, wat er is gebeurd en welke uitkomst je zoekt.</p>
-          <p class="contact-email"><strong>incassotabako@gmail.com</strong></p>
-          <button class="text-button" id="copy-email" type="button" data-email="incassotabako@gmail.com">E-mailadres kopiëren</button>
-          <hr class="contact-separator">
-          <p>Een melding verschijnt niet automatisch in het openbare dossieroverzicht. Als een dossier later openbaar wordt gemaakt, worden persoonsnamen vervangen door clientnummers.</p>
-          <a class="text-link" href="updates.html">Alleen dossierupdates ontvangen? →</a>
-        </div>
-
-        <form class="contact-form-card" action="https://formsubmit.co/incassotabako@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Nieuwe zaakmelding via Incasso Tabako">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://incassotabako.nl/melding-verzonden.html">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-          <div class="form-grid">
-            <label>Je naam<input type="text" name="Naam" autocomplete="name" required></label>
-            <label>E-mailadres<input type="email" name="_replyto" autocomplete="email" required></label>
-          </div>
-          <label>Waar gaat het conflict over?<input type="text" name="Onderwerp" required></label>
-          <label>Jouw verhaal<textarea name="Verhaal" minlength="20" required placeholder="Beschrijf de situatie en de gewenste oplossing. Minimaal 20 tekens."></textarea></label>
-          <p class="form-note">Na verzenden wordt je melding rechtstreeks doorgestuurd naar Incasso Tabako. Er wordt geen mail-app geopend.</p>
-          <div><button class="button" type="submit">Melding versturen ↗</button></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><div><p class="footer-brand">Incasso Tabako</p><p class="footer-meta">VORDEREN VANDAAG, EEN STERKER MORGEN</p></div><a href="#top">Terug naar boven ↑</a></div></footer>
-  <script src="script.js?v=23"></script>
-</body>
-</html>
+  <meta name="description" content="Leg een nieuwe melding of conflict voor aan Incasso Tabako.">
+  <meta name="theme-color" content="#102a36">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Incasso Tabako">
+  <meta property="og:title" content="Conflict aanmelden — Incasso Tabako">
+  <meta property="og:description" content="Leg een nieuwe melding of conflict voor aan Incasso Tabako.">
+  <meta property="og:url" content="https://incassotabako.nl/contact.html">
+  <meta property="og:image" content="https://incassotabako.nl/assets/og-incasso-tabako.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://incassotabako.nl/contact.html">
+  <title>Conflict aanmelden — Incasso Tabako</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=39">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+</head><body id="top"><header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Incasso Tabako homepage"><img src="/assets/logo-incasso-tabako.png" alt="Incasso Tabako"></a>
+    <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Hoofdnavigatie"><a href="/dossiers.html">Dossiers</a><a href="/team.html">Ons team</a><a href="/diensten.html">Diensten</a><a href="/updates.html">Updates</a><a class="nav-cta" href="/contact.html" aria-current="page">Conflict aanmelden ↗</a></nav>
+  </div>
+</header><main>
+<section class="page-hero"><div class="container"><p class="breadcrumb"><a href="/">Home</a> / Conflict aanmelden</p><p class="eyebrow">Nieuwe melding</p><h1>Vertel ons<br><em>wat er speelt.</em></h1><p class="lede">Een melding wordt niet automatisch openbaar. Vul alleen informatie in die nodig is om het conflict te begrijpen.</p></div></section>
+<section class="section"><div class="container contact-layout"><aside class="contact-aside"><p class="section-number">Wat gebeurt er daarna?</p><ol class="contact-steps"><li><span>1</span><div><strong>Melding ontvangen</strong><p>De melding komt binnen bij Incasso Tabako.</p></div></li><li><span>2</span><div><strong>Eerste beoordeling</strong><p>We bekijken onderwerp, betrokkenen en gewenste uitkomst.</p></div></li><li><span>3</span><div><strong>Dossier of terugkoppeling</strong><p>Als de zaak wordt opgepakt, krijgt deze intern een dossiernummer.</p></div></li></ol><div class="aside-note"><strong>Direct contact</strong><p>incassotabako@gmail.com</p><button class="text-button" data-copy-email="incassotabako@gmail.com">Kopieer e-mailadres</button></div></aside>
+<form class="contact-card" action="https://formsubmit.co/incassotabako@gmail.com" method="POST"><input type="hidden" name="_subject" value="Nieuwe zaakmelding via incassotabako.nl"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://incassotabako.nl/melding-verzonden.html"><input type="text" name="_honey" class="trap" tabindex="-1" autocomplete="off"><div class="form-grid"><label>Naam<input type="text" name="Naam" autocomplete="name" required></label><label>E-mailadres<input type="email" name="email" autocomplete="email" required></label></div><div class="form-grid"><label>Type conflict<select name="Type conflict" required><option value="">Kies een categorie</option><option>Geld / betaling</option><option>Afspraken / contract</option><option>Schade / compensatie</option><option>Schoolzaak</option><option>Anders</option></select></label><label>Gewenste uitkomst<input type="text" name="Gewenste uitkomst" placeholder="Wat zou voor jou een oplossing zijn?"></label></div><label>Onderwerp<input type="text" name="Onderwerp" required></label><label>Jouw verhaal<textarea name="Verhaal" minlength="20" required placeholder="Beschrijf kort wat er is gebeurd en wie erbij betrokken zijn."></textarea></label><label class="check-label"><input type="checkbox" required><span>Ik begrijp dat deze informatie wordt gebruikt om mijn melding te beoordelen en heb de <a href="/privacy.html" target="_blank">privacy-uitleg</a> gelezen.</span></label><div class="form-submit"><button class="button" type="submit">Melding versturen ↗</button><small>Er wordt geen mail-app geopend.</small></div></form></div></section>
+</main><footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand-wrap"><img src="/assets/logo-incasso-tabako.png" alt="Incasso Tabako"><p>Vorderen vandaag, een sterker morgen.</p></div>
+    <div><h3>Navigatie</h3><a href="/dossiers.html">Dossiers</a><a href="/team.html">Ons team</a><a href="/diensten.html">Diensten</a><a href="/updates.html">Updates</a></div>
+    <div><h3>Contact</h3><a href="/contact.html">Conflict aanmelden</a><a href="mailto:incassotabako@gmail.com">incassotabako@gmail.com</a><a href="/privacy.html">Privacy &amp; anonimiteit</a></div>
+    <div><h3>Transparantie</h3><p>Publieke dossiers worden geanonimiseerd en tonen alleen informatie die voor openbare publicatie is vrijgegeven.</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span data-year></span> Incasso Tabako</span><span>Interne functietitels geven geen wettelijke beroepsbevoegdheid aan.</span><a href="#top">Omhoog ↑</a></div>
+</footer><script src="/script.js?v=39" defer></script></body></html>
