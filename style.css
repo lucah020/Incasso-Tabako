@@ -1308,3 +1308,22 @@ blockquote,
 
 /* V39 — status updates + remove decorative story number */
 .home-story-panel-story:before{content:none!important;display:none!important;}
+
+
+/* =========================================================
+   V40 — mobile navigation no longer sticks while scrolling
+   ========================================================= */
+@media (max-width: 760px){
+  .site-header{
+    position:relative !important;
+    top:auto !important;
+    backdrop-filter:none !important;
+  }
+  .header-inner{
+    position:relative;
+  }
+  .nav{
+    top:100% !important;
+    z-index:120;
+  }
+}
